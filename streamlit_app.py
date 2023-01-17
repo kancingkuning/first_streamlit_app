@@ -54,7 +54,6 @@ try:
          back_from_function = get_fruityvice_data(fruit_choice)
          streamlit.dataframe(back_from_function)
       
-streamlit.write('The user entered', fruit_choice)
 
 #import requests
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
@@ -66,7 +65,7 @@ streamlit.write('The user entered', fruit_choice)
 
 #don't run anything past here while we troubleshoot
 streamlit.stop()
-
+streamlit.write('The user entered', fruit_choice)
 #import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
